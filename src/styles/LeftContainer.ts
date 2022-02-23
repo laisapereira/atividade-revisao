@@ -45,3 +45,7 @@ export const Inform = styled.div`
     padding-bottom: 0.6rem;
   }
 `
+
+export const ContainerFlex = styled.div`
+  display: flex;
+`

@@ -1,5 +1,11 @@
 import React from 'react'
 
-export default function index() {
-  return <div>index</div>
+import { Number } from '@/styles/RightContainer'
+
+export default function Numbers() {
+  return (
+    <div>
+      <Number>06</Number>
+    </div>
+  )
 }

@@ -1,10 +1,14 @@
 import LeftContainer from '@/components/LeftContainer'
+import RightContainer from '@/components/RightContainer'
+
+import { ContainerFlex } from '../styles/LeftContainer'
 
 function Home() {
   return (
-    <div>
+    <ContainerFlex>
       <LeftContainer />
-    </div>
+      <RightContainer />
+    </ContainerFlex>
   )
 }
 
