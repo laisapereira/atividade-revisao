@@ -2,10 +2,8 @@ import React from 'react'
 
 export default function SelectBox() {
   return (
-    <select name="select">
-      <option value="mega-sena" selected>
-        MEGA-SENA
-      </option>
+    <select name="select" defaultValue="DEFAULT">
+      <option value="mega-sena">MEGA-SENA</option>
       <option value="quina">QUINA</option>
       <option value="lotofácil">LOTOFÁCIL</option>
       <option value="lotomania">LOTOMANIA</option>
