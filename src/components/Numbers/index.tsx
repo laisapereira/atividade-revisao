@@ -28,7 +28,7 @@ export default function NumbersLoteria({ loteria }: IPropsLoteria) {
         setLoading(false)
       }
     })()
-  }, [])
+  }, [loteria])
 
   return Dadosloteria ? (
     <div>

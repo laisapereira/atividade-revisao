@@ -23,7 +23,7 @@ function HomePage() {
         )
 
         setConcurso(response.data)
-        console.log(response.data)
+        console.log(concursoLoteria)
       } catch (err) {
         setError(error)
       } finally {
@@ -54,18 +54,22 @@ function HomePage() {
   return concurso ? (
     <L.ContainerFlex>
       <L.Container>
-        <select name="select" defaultValue="DEFAULT">
-          <option value="mega-sena">MEGA-SENA</option>
-          <option value="quina">QUINA</option>
-          <option value="lotofácil">LOTOFÁCIL</option>
-          <option value="lotomania">LOTOMANIA</option>
-          <option value="timemania">TIMEMANIA</option>
-          <option value="dia da sorte">DIA DA SORTE</option>
+        <select
+          name="select"
+          defaultValue={concursoLoteria}
+          onChange={e => setConcursoLoteria(e.target.value)}
+        >
+          <option value="2359">MEGA-SENA</option>
+          <option value="5534">QUINA</option>
+          <option value="2200">LOTOFÁCIL</option>
+          <option value="2167">LOTOMANIA</option>
+          <option value="1622">TIMEMANIA</option>
+          <option value="440">DIA DA SORTE</option>
         </select>
 
         <L.Title>
           <Logo />
-          <h3>MEGA-SENA</h3>
+          <h3>{`${selectLoteria(concursoLoteria)}`}</h3>
         </L.Title>
 
         <L.Inform>
