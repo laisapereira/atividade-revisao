@@ -9,14 +9,14 @@ export interface IPropsLoteria {
 }
 
 export default function NumbersLoteria({ loteria }: IPropsLoteria) {
-  const [Dadosloteria, setDadosLoteria] = useState<INumbers[]>()
+  const [Dadosloteria, setDadosLoteria] = useState<INumbers>()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   React.useEffect(() => {
     ;(async () => {
       try {
-        const response = await axios.get<INumbers[]>(
+        const response = await axios.get<INumbers>(
           `https://brainn-api-loterias.herokuapp.com/api/v1/concursos/${loteria}`
         )
 
@@ -32,9 +32,9 @@ export default function NumbersLoteria({ loteria }: IPropsLoteria) {
 
   return Dadosloteria ? (
     <div>
-      {Dadosloteria.map(DadoLoteria =>
-        DadoLoteria.numeros.map(numero => <Number>{numero}</Number>)
-      )}
+      {Dadosloteria.numeros.map(numero => (
+        <Number>{numero}</Number>
+      ))}
     </div>
   ) : (
     <div>

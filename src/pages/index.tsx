@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 import Logo from '@/components/Images/logo'
 import NumbersLoteria from '@/components/Numbers'
-import SelectBox from '@/components/SelectBox'
 import { IConcurso } from '@/types/concurso'
 
 import * as L from '../styles/LeftContainer'
@@ -33,13 +32,36 @@ function HomePage() {
     })()
   }, [])
 
-  const selectLoteria = ()
+  const selectLoteria = (lottery: string) => {
+    switch (lottery) {
+      case '2359':
+        return 'Mega-Sena'
+      case '5534':
+        return 'Quina'
+      case '2200':
+        return 'Lotofácil'
+      case '2167':
+        return 'Lotomania'
+      case '1622':
+        return 'Timemania'
+      case '440':
+        return 'Dia de Sorte'
+      default:
+        return 'Mega-Sena'
+    }
+  }
 
-
-  return (
+  return concurso ? (
     <L.ContainerFlex>
       <L.Container>
-        <SelectBox />
+        <select name="select" defaultValue="DEFAULT">
+          <option value="mega-sena">MEGA-SENA</option>
+          <option value="quina">QUINA</option>
+          <option value="lotofácil">LOTOFÁCIL</option>
+          <option value="lotomania">LOTOMANIA</option>
+          <option value="timemania">TIMEMANIA</option>
+          <option value="dia da sorte">DIA DA SORTE</option>
+        </select>
 
         <L.Title>
           <Logo />
@@ -53,13 +75,15 @@ function HomePage() {
       </L.Container>
 
       <R.Container>
-        <h2>oi</h2>
+        <NumbersLoteria loteria={concursoLoteria} />
         <h3>
           Este sorteio é meramente ilustrativo e não possui nenhuma ligação com
           a CAIXA.
         </h3>
       </R.Container>
     </L.ContainerFlex>
+  ) : (
+    <h1>oioi</h1>
   )
 }
 
