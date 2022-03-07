@@ -1,11 +1,41 @@
+import axios from 'axios'
+import React, { useState } from 'react'
+
 import Logo from '@/components/Images/logo'
 import NumbersLoteria from '@/components/Numbers'
 import SelectBox from '@/components/SelectBox'
+import { IConcurso } from '@/types/concurso'
 
 import * as L from '../styles/LeftContainer'
 import * as R from '../styles/RightContainer'
 
-function Home() {
+function HomePage() {
+  const [concurso, setConcurso] = useState<IConcurso[] | null>(null)
+
+  const [concursoLoteria, setConcursoLoteria] = useState('2359')
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  React.useEffect(() => {
+    ;(async () => {
+      try {
+        const response = await axios.get<IConcurso[]>(
+          'https://brainn-api-loterias.herokuapp.com/api/v1/loterias-concursos'
+        )
+
+        setConcurso(response.data)
+        console.log(response.data)
+      } catch (err) {
+        setError(error)
+      } finally {
+        setLoading(false)
+      }
+    })()
+  }, [])
+
+  const selectLoteria = ()
+
+
   return (
     <L.ContainerFlex>
       <L.Container>
@@ -33,4 +63,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage
