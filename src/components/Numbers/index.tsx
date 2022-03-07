@@ -4,11 +4,11 @@ import React, { useState } from 'react'
 import { Number } from '@/styles/RightContainer'
 import { INumbers } from '@/types/concurso'
 
-interface IPropsLoteria {
+export interface IPropsLoteria {
   loteria: string
 }
 
-export default function Numbers({ loteria }: IPropsLoteria) {
+export default function NumbersLoteria({ loteria }: IPropsLoteria) {
   const [Dadosloteria, setDadosLoteria] = useState<INumbers[]>()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
