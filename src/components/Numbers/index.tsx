@@ -2,22 +2,26 @@ import axios from 'axios'
 import React, { useState } from 'react'
 
 import { Number } from '@/styles/RightContainer'
-import { ILoteria1 } from '@/types/concurso'
+import { INumbers } from '@/types/concurso'
 
-export default function Numbers() {
-  const [loteria, setLoteria] = useState<ILoteria1[] | undefined>()
+interface IPropsLoteria {
+  loteria: string
+}
+
+export default function Numbers({ loteria }: IPropsLoteria) {
+  const [Dadosloteria, setDadosLoteria] = useState<INumbers[]>()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   React.useEffect(() => {
-    console.log('oi')
     ;(async () => {
       try {
-        const response = await axios.get<ILoteria1[]>(
-          'https://brainn-api-loterias.herokuapp.com/api/v1/loterias-concursos'
+        const response = await axios.get<INumbers[]>(
+          `https://brainn-api-loterias.herokuapp.com/api/v1/concursos/${loteria}`
         )
 
-        setLoteria(response.data)
+        setDadosLoteria(response.data)
+        console.log(response.data)
       } catch (err) {
         setError(error)
       } finally {
@@ -26,16 +30,15 @@ export default function Numbers() {
     })()
   }, [])
 
-  console.log(loteria)
-
-  return loteria ? (
+  return Dadosloteria ? (
     <div>
-      <p>oioi</p>
-      <Number>oi</Number>
+      {Dadosloteria.map(DadoLoteria =>
+        DadoLoteria.numeros.map(numero => <Number>{numero}</Number>)
+      )}
     </div>
   ) : (
     <div>
-      <h1>oi</h1>
+      <h1>Teste...</h1>
     </div>
   )
 }

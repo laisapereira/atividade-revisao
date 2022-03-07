@@ -1,9 +1,9 @@
-export interface ILoteria1 {
+export interface IConcurso {
   loteriaId: number
   concursoId: string
 }
 
-export interface ILoteria {
+export interface INumbers {
   id: string
   loteria: number
   numeros: string[]
