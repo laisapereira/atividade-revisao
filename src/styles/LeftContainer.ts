@@ -26,6 +26,12 @@ export const Container = styled.div`
     margin-left: 10rem;
     gap: 21rem;
   }
+
+  @media screen and (max-width: 800px) {
+    section {
+      gap: 5rem;
+    }
+  }
 `
 
 export const Title = styled.div`
@@ -35,6 +41,13 @@ export const Title = styled.div`
     color: white;
     padding-top: 1rem;
     font-size: 2rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
   }
 `
 
@@ -48,6 +61,11 @@ export const Inform = styled.div`
     font-weight: 400;
     font-size: 1rem;
     padding-bottom: 0.6rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: row;
+    align-items: center;
   }
 `
 
@@ -70,7 +88,13 @@ export const DesktopBackground = styled.div`
 `
 
 export const ContainerLogo = styled.div`
-  margin-left: -2rem;
+  margin-left: -6rem;
+  @media screen and (max-width: 800px) {
+    svg,
+    path {
+      margin-top: -12rem;
+    }
+  }
 `
 
 export const ContainerFlex = styled.div`
@@ -86,6 +110,15 @@ export const ContainerFlex = styled.div`
     path {
       stroke: currentColor;
       position: absolute;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      height: 55vh;
     }
   }
 
