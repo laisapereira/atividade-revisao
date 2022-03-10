@@ -63,9 +63,21 @@ export const Inform = styled.div`
     padding-bottom: 0.6rem;
   }
 
+  span {
+    display: none;
+  }
+
   @media screen and (max-width: 800px) {
     flex-direction: row;
     align-items: center;
+
+    span {
+      display: inline-flex;
+    }
+
+    h3 {
+      display: none;
+    }
   }
 `
 

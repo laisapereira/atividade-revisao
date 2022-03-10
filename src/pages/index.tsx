@@ -6,7 +6,6 @@ import SideBar from '@/components/Images/sidebar'
 import NumbersLoteria from '@/components/Numbers'
 import { IConcurso } from '@/types/concurso'
 
-import logo from '../../public/logo.png'
 import * as L from '../styles/LeftContainer'
 import * as R from '../styles/RightContainer'
 
@@ -80,8 +79,10 @@ function HomePage() {
           </L.Title>
 
           <L.Inform>
-            <p>CONCURSO</p>
-            <h3> 4531 - 12/03/2022</h3>
+            <p>
+              CONCURSO <span> Nº {concursoLoteria}</span>
+            </p>
+            <h3> {concursoLoteria} - 12/03/2022</h3>
           </L.Inform>
         </section>
       </L.Container>
