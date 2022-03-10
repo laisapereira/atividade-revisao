@@ -53,7 +53,7 @@ function HomePage() {
 
   return concurso ? (
     <L.ContainerFlex>
-      <L.Container>
+      <L.Container id={`div${concursoLoteria}`}>
         <select
           name="select"
           defaultValue={concursoLoteria}

@@ -48,4 +48,20 @@ export const Inform = styled.div`
 
 export const ContainerFlex = styled.div`
   display: flex;
+
+  #div5534 {
+    background-color: ${props => props.theme.colors.quina};
+  }
+  #div2200 {
+    background-color: ${props => props.theme.colors.lotofacil};
+  }
+  #div2167 {
+    background-color: ${props => props.theme.colors.lotomania};
+  }
+  #div1622 {
+    background-color: ${props => props.theme.colors.timemania};
+  }
+  #div440 {
+    background-color: ${props => props.theme.colors.sorte};
+  }
 `
