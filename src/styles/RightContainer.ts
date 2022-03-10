@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   h3 {
     font-weight: 400;
-    padding-top: 3rem;
+    padding-top: 6rem;
   }
 
   div {

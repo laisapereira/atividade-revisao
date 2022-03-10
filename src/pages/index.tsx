@@ -73,12 +73,15 @@ function HomePage() {
           </select>
 
           <L.Title>
-            <h3>{`${selectLoteria(concursoLoteria)}`}</h3>
+            <div>
+              <Logo />
+              <h3>{`${selectLoteria(concursoLoteria)}`}</h3>
+            </div>
           </L.Title>
 
           <L.Inform>
             <p>CONCURSO</p>
-            <h3>4531 – 07/04/2020</h3>
+            <h3> ** - 12/03/2022</h3>
           </L.Inform>
         </section>
       </L.Container>

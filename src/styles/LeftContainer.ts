@@ -23,20 +23,18 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 3rem;
-    gap: 20rem;
+    margin-left: 10rem;
+    gap: 21rem;
   }
 `
 
 export const Title = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: white;
+  margin-left: 7rem;
   font-size: 2rem;
 
   h3 {
     color: white;
+    padding-top: 1rem;
   }
 `
 
@@ -53,92 +51,85 @@ export const Inform = styled.div`
   }
 `
 
+export const ContainerLogo = styled.div`
+  margin-left: -2rem;
+`
+
 export const ContainerFlex = styled.div`
   display: flex;
 
   #div2359 {
     color: ${props => props.theme.colors.megasena};
     background-color: whitesmoke;
-    margin-left: -7vw;
+    margin-left: -12vw;
     position: relative;
-    width: 65vw;
 
     svg,
     path {
       stroke: currentColor;
       position: absolute;
-      margin-left: -18rem;
     }
   }
 
   #div5534 {
     color: ${props => props.theme.colors.quina};
     background-color: whitesmoke;
-    margin-left: -7vw;
+    margin-left: -12vw;
     position: relative;
-    width: 60vw;
 
     svg,
     path {
       stroke: currentColor;
       position: absolute;
-      margin-left: -15rem;
     }
   }
   #div2200 {
     color: ${props => props.theme.colors.lotofacil};
     background-color: whitesmoke;
-    margin-left: -7vw;
+    margin-left: -12vw;
     position: relative;
-    width: 60vw;
 
     svg,
     path {
       stroke: currentColor;
       position: absolute;
-      margin-left: -15rem;
     }
   }
   #div2167 {
     color: ${props => props.theme.colors.lotomania};
     background-color: whitesmoke;
-    margin-left: -7vw;
+    margin-left: -12vw;
     position: relative;
-    width: 60vw;
 
     svg,
     path {
       stroke: currentColor;
       position: absolute;
-      margin-left: -15rem;
     }
   }
   #div1622 {
     color: ${props => props.theme.colors.timemania};
     background-color: whitesmoke;
-    margin-left: -7vw;
+    margin-left: -12vw;
     position: relative;
-    width: 65vw;
 
     svg,
     path {
       stroke: currentColor;
       position: absolute;
-      margin-left: -15rem;
     }
   }
   #div440 {
     color: ${props => props.theme.colors.sorte};
 
     background-color: whitesmoke;
-    margin-left: -7vw;
+    margin-left: -12vw;
     position: relative;
-    width: 65vw;
+
     svg,
     path {
       stroke: currentColor;
       position: absolute;
-      margin-left: -15rem;
     }
   }
 

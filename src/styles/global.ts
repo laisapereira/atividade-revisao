@@ -83,7 +83,7 @@ export const GlobalStyles = styled.createGlobalStyle`
     text-decoration-skip-ink: auto;
   }
 
-  /* Make media tags easier to work with */
+  /* Make media tags easier to work with 
   img,
   picture,
   video,
@@ -92,6 +92,7 @@ export const GlobalStyles = styled.createGlobalStyle`
     max-width: 100%;
     display: block;
   }
+  */
 
   /* 8. Avoid text overflows */
   p,
