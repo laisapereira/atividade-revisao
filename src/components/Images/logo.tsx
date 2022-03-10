@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <ContainerLogo>
       <svg
-        width="59"
+        width="50"
         height="55"
         viewBox="0 0 61 56"
         fill="white"

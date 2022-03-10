@@ -30,11 +30,11 @@ export const Container = styled.div`
 
 export const Title = styled.div`
   margin-left: 7rem;
-  font-size: 2rem;
 
   h3 {
     color: white;
     padding-top: 1rem;
+    font-size: 2rem;
   }
 `
 
@@ -48,6 +48,24 @@ export const Inform = styled.div`
     font-weight: 400;
     font-size: 1rem;
     padding-bottom: 0.6rem;
+  }
+`
+
+export const ContainerBackground = styled.div`
+  margin-left: -2rem;
+`
+
+export const HeaderBackground = styled.div`
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+  }
+`
+
+export const DesktopBackground = styled.div`
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `
 
@@ -134,6 +152,5 @@ export const ContainerFlex = styled.div`
   }
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
-    flex-direction: column;
   }
 `
