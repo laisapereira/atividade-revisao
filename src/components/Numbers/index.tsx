@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
-import { Number } from '@/styles/RightContainer'
+import { LoteryNumbers } from '@/styles/RightContainer'
 import { INumbers } from '@/types/concurso'
 
 export interface IPropsLoteria {
@@ -33,7 +33,7 @@ export default function NumbersLoteria({ loteria }: IPropsLoteria) {
   return Dadosloteria ? (
     <div>
       {Dadosloteria.numeros.map(numero => (
-        <Number>{numero}</Number>
+        <LoteryNumbers>{numero}</LoteryNumbers>
       ))}
     </div>
   ) : (

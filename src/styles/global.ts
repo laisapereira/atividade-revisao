@@ -19,7 +19,7 @@ export const GlobalStyles = styled.createGlobalStyle`
   body,
   html,
   #root {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
   }
