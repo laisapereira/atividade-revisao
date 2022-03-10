@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: ${props => props.theme.colors.megasena};
   width: 40vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   padding-left: 6vw;
   padding-right: 10vw;
   gap: 20rem;
@@ -18,6 +15,16 @@ export const Container = styled.div`
     border-radius: 0.5rem;
     padding: 0.8rem;
     margin-top: 2.5rem;
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.05));
+  }
+
+  section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+    gap: 20rem;
   }
 `
 
@@ -49,19 +56,93 @@ export const Inform = styled.div`
 export const ContainerFlex = styled.div`
   display: flex;
 
+  #div2359 {
+    color: ${props => props.theme.colors.megasena};
+    background-color: whitesmoke;
+    margin-left: -7vw;
+    position: relative;
+    width: 65vw;
+
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      margin-left: -18rem;
+    }
+  }
+
   #div5534 {
-    background-color: ${props => props.theme.colors.quina};
+    color: ${props => props.theme.colors.quina};
+    background-color: whitesmoke;
+    margin-left: -7vw;
+    position: relative;
+    width: 60vw;
+
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      margin-left: -15rem;
+    }
   }
   #div2200 {
-    background-color: ${props => props.theme.colors.lotofacil};
+    color: ${props => props.theme.colors.lotofacil};
+    background-color: whitesmoke;
+    margin-left: -7vw;
+    position: relative;
+    width: 60vw;
+
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      margin-left: -15rem;
+    }
   }
   #div2167 {
-    background-color: ${props => props.theme.colors.lotomania};
+    color: ${props => props.theme.colors.lotomania};
+    background-color: whitesmoke;
+    margin-left: -7vw;
+    position: relative;
+    width: 60vw;
+
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      margin-left: -15rem;
+    }
   }
   #div1622 {
-    background-color: ${props => props.theme.colors.timemania};
+    color: ${props => props.theme.colors.timemania};
+    background-color: whitesmoke;
+    margin-left: -7vw;
+    position: relative;
+    width: 65vw;
+
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      margin-left: -15rem;
+    }
   }
   #div440 {
-    background-color: ${props => props.theme.colors.sorte};
+    color: ${props => props.theme.colors.sorte};
+
+    background-color: whitesmoke;
+    margin-left: -7vw;
+    position: relative;
+    width: 65vw;
+    svg,
+    path {
+      stroke: currentColor;
+      position: absolute;
+      margin-left: -15rem;
+    }
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    flex-direction: column;
   }
 `

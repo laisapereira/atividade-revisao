@@ -2,9 +2,11 @@ import axios from 'axios'
 import React, { useState } from 'react'
 
 import Logo from '@/components/Images/logo'
+import SideBar from '@/components/Images/sidebar'
 import NumbersLoteria from '@/components/Numbers'
 import { IConcurso } from '@/types/concurso'
 
+import logo from '../../public/logo.png'
 import * as L from '../styles/LeftContainer'
 import * as R from '../styles/RightContainer'
 
@@ -54,28 +56,31 @@ function HomePage() {
   return concurso ? (
     <L.ContainerFlex>
       <L.Container id={`div${concursoLoteria}`}>
-        <select
-          name="select"
-          defaultValue={concursoLoteria}
-          onChange={e => setConcursoLoteria(e.target.value)}
-        >
-          <option value="2359">MEGA-SENA</option>
-          <option value="5534">QUINA</option>
-          <option value="2200">LOTOFÁCIL</option>
-          <option value="2167">LOTOMANIA</option>
-          <option value="1622">TIMEMANIA</option>
-          <option value="440">DIA DA SORTE</option>
-        </select>
+        <SideBar />
 
-        <L.Title>
-          <Logo />
-          <h3>{`${selectLoteria(concursoLoteria)}`}</h3>
-        </L.Title>
+        <section>
+          <select
+            name="select"
+            defaultValue={concursoLoteria}
+            onChange={e => setConcursoLoteria(e.target.value)}
+          >
+            <option value="2359">MEGA-SENA</option>
+            <option value="5534">QUINA</option>
+            <option value="2200">LOTOFÁCIL</option>
+            <option value="2167">LOTOMANIA</option>
+            <option value="1622">TIMEMANIA</option>
+            <option value="440">DIA DA SORTE</option>
+          </select>
 
-        <L.Inform>
-          <p>CONCURSO</p>
-          <h3>4531 – 07/04/2020</h3>
-        </L.Inform>
+          <L.Title>
+            <h3>{`${selectLoteria(concursoLoteria)}`}</h3>
+          </L.Title>
+
+          <L.Inform>
+            <p>CONCURSO</p>
+            <h3>4531 – 07/04/2020</h3>
+          </L.Inform>
+        </section>
       </L.Container>
 
       <R.Container>
@@ -88,7 +93,7 @@ function HomePage() {
       </R.Container>
     </L.ContainerFlex>
   ) : (
-    <h1>oioi</h1>
+    <h1> . . . </h1>
   )
 }
 

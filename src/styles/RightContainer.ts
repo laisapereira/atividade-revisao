@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background-color: whitesmoke;
-  width: 60vw;
+  width: 80vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
