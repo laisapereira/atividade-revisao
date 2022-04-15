@@ -82,7 +82,7 @@ function HomePage() {
             <p>
               CONCURSO <span> Nº {concursoLoteria}</span>
             </p>
-            <h3> {concursoLoteria} - 12/03/2022</h3>
+            <h3> {concursoLoteria} **</h3>
           </L.Inform>
         </section>
       </L.Container>
